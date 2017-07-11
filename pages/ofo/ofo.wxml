@@ -1,0 +1,29 @@
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="form-group">
+    <label for="exampleInputEmail">Number</label>
+    <input  class="form-control" placeholder="请输入号码" auto-focus name="number" />
+  </view>
+  <view class="form-group">
+    <label for="exampleInputPassword">Password</label>
+    <input type="email" class="form-control" name="password" placeholder="请输入密码" />
+  </view> 
+  <button formType="submit" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" > Submit </button>
+</form>
+
+<view style="height:10px"></view>
+
+<view class="section">
+  <view class="flex-wrp" style="flex-direction:row;display:flex;width:100%;font-weight:bold;border:1px solid #ccc;text-align:center">
+    <view class="flex-item" style="width:33%">#</view>
+    <view class="flex-item" style="border-left:1px solid #ccc;width:33%">number</view>
+    <view class="flex-item" style="border-left:1px solid #ccc;width:33%">password</view>
+  </view>
+  <view wx:for="{{numbers}}" wx:key="*this" class="flex-wrp" style="flex-direction:row;display:flex;width:100%;border:1px solid #ccc;text-align:center"> 
+    <view class="flex-item" style="width:33%">{{item.id}}</view>
+    <view class="flex-item" style="border-left:1px solid #ccc;width:33%">{{item.number}}</view>
+    <view class="flex-item" style="border-left:1px solid #ccc;width:33%">{{item.pwd}}</view>
+  </view>
+</view>
+
+
